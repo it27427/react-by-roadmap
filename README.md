@@ -1,7 +1,5 @@
 # Learning React By Roadmap
 
-# React-Basics
-
 <h4>React Fundamental Concepts:</h4>
 
 1. Core of React (State or UI Manipulation, JSX)
