@@ -1,0 +1,39 @@
+@forward "./fonts";
+
+:root {
+  color-scheme: light dark;
+
+  // LIGHT-VARIABLES
+  --white: #ffffff;
+  --lightbodybg: #f5f6f8; 
+  --textdark: #333333;
+  --lightbtnbg: #f9f9f9;
+  
+  // DARK-VARIABLES
+  --black: #000000;
+  --darkbodybg: #242424;
+  --textlight: #f1f1f4;
+
+  // LIGHT-DARK-VARIABLES
+  --linkcolor: #646cff;
+  --linkhover: #535bf2;
+}
+
+$time: 500ms;
+
+// COLOR-LIGHT
+$lightbodybg: var(--lightbodybg);
+$textdark: var(--textdark);
+$lightbtnbg: var(--lightbtnbg);
+$white: var(--white);
+
+// COLOR-DARK
+$black: var(--black);
+$darkbodybg: var(--darkbodybg);
+$textlight: var(--textlight);
+
+// COLOR-LIGHT-DARK
+$linkcolor: var(--linkcolor);
+$linkhovercolor: var(--linkhover);
+
+@media (prefers-color-scheme: light) {}

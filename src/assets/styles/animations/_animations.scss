@@ -1,0 +1,143 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+/* ANIMATIONS */
+
+@keyframes rotating {
+  from {
+    @include rotate(0);
+  }
+  to {
+    @include rotate(360);
+  }
+}
+
+@keyframes updown {
+  0% {
+    @include translateY(size(4));
+  }
+
+  50% {
+    @include translateY(size(12));
+  }
+
+  100% {
+    @include translateY(size(4));
+  }
+}
+
+@keyframes spin-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideDownIn {
+	0% {
+		@include translateY(-100%);
+	}
+
+	100% {
+		@include translateY(0);
+	}
+
+	0% {
+		@include translateY(-100%);
+	}
+}
+
+@keyframes slideUpIn {
+	0% {
+		@include translateY(size(-20));
+	}
+
+	100% {
+		@include translateY(0);
+	}
+
+	0% {
+		@include translateY(size(20));
+	}
+}
+
+@keyframes slideLeftIn {
+	0% {
+		@include translateX(size(100));
+	}
+
+	100% {
+		@include translateX(0);
+	}
+
+	0% {
+		@include translateX(size(-100));
+	}
+}
+
+@keyframes slideRightIn {
+	0% {
+		@include translateX(size(100));
+	}
+
+	100% {
+		@include translateX(0);
+	}
+
+	0% {
+		@include translateX(size(100));
+	}
+}
+
+@keyframes floating {
+	0% {
+		@include translateY(0%);
+	}
+
+	50% {
+		@include translateY(1%);
+	}
+
+	100% {
+		@include translateY(0%);
+	}
+}
+
+@keyframes rotation {
+  from {
+		@include rotate(0);
+  }
+	
+	to {
+		@include rotate(360);
+  }
+}
+
+@mixin animation {
+	animation-duration: $time;
+	animation-fill-mode: both;
+}
+
+@mixin slideDownIn {
+	animation-name: slideDownIn;
+}
+
+@mixin slideUpIn {
+	animation-name: slideUpIn;
+}
+
+@mixin slideLeftIn {
+	animation-name: slideLeftIn;
+}
+
+@mixin slideRightIn {
+	animation-name: slideRightIn;
+}
+
+@mixin floating {
+	animation-name: floating;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}

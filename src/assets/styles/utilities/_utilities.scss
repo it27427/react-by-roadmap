@@ -1,0 +1,27 @@
+@use "../global" as *;
+@use "../partials" as *;
+@use "../animations" as *;
+
+.parallax {
+  position: relative;
+  @include translateY(size(48));
+  opacity: 1;
+  transition: 1s all ease;
+
+  &.active {
+    @include translateY(0);
+    opacity: 1;
+  }
+}
+
+.rotating {
+  animation: rotating 12s linear infinite;
+}
+
+.updown {
+  animation: updown 1s cubic-bezier(.36,.07,.57,.99) infinite;
+}
+
+.floating {
+  @include floating;
+}
